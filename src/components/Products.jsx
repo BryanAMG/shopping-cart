@@ -2,7 +2,7 @@ import { AddToCartIcon } from './Icons'
 
 export default function Products({ products }) {
   return (
-    <main className='flex w-full items-center justify-center '>
+    <main className='flex w-full items-center justify-center px-4 '>
       <ul className='grid gap-4 text-white md:grid-cols-2 '>
         {products.slice(0, 10).map((product) => (
           <li
