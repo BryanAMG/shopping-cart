@@ -1,9 +1,9 @@
 import { useMemo, useId } from 'react'
 import { products } from '../mocks/products.json'
-import { useFiltersData } from '../context/FiltersProvider'
+import { useFilters } from '../hooks/useFilters'
 
 export default function Filters() {
-  const { handleChange, filters: filtersForm } = useFiltersData()
+  const { handleChange, filters: filtersForm } = useFilters()
 
   // indentificador unico en toda la aplicación
   const minPriceFilterId = useId()

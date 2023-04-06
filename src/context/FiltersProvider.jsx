@@ -1,4 +1,4 @@
-import { useContext, createContext, useState } from 'react'
+import { createContext, useState } from 'react'
 
 export const filterContext = createContext()
 
@@ -19,17 +19,10 @@ export default function FilterProvider({ children }) {
     <filterContext.Provider
       value={{
         filters,
-        setFilters,
         handleChange
       }}
     >
       {children}
     </filterContext.Provider>
   )
-}
-
-export const useFiltersData = () => {
-  const dataProvider = useContext(filterContext)
-  if (dataProvider === undefined) throw new Error('No esta dentro del contexto')
-  return dataProvider
 }
