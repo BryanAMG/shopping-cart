@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-scrollbar": "^3.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -29,7 +30,8 @@
       "./node_modules/standard/eslintrc.json"
     ],
     "rules": {
-      "space-before-function-paren": "off"
+      "space-before-function-paren": "off",
+      "multiline-ternary": "off"
     }
   }
 }
