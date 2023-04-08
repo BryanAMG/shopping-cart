@@ -1,12 +1,17 @@
 import { CartIcon, ClearCartIcon } from './Icons'
 import { useCart } from '../hooks/useCart'
 import { CartItem } from './CartItem'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 
 export function Cart() {
   const [isOpenCart, setIsOpenCart] = useState(false)
-  const { cart, clearCart, addToCart, totalMount } = useCart()
-
+  const { cart, clearCart, addToCart } = useCart()
+  const totalMount = useMemo(() => {
+    return cart.reduce(
+      (acc, current) => acc + current.quantity * current.price,
+      0
+    )
+  }, [cart])
   return (
     <>
       <button

@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect, useMemo } from 'react'
+import { useState, createContext, useEffect } from 'react'
 
 export const CartContext = createContext()
 
@@ -26,12 +26,6 @@ export function CartProvider({ children }) {
     if (!cart) return
     setCart([])
   }
-  const totalMount = useMemo(() => {
-    return cart.reduce(
-      (acc, current) => acc + current.quantity * current.price,
-      0
-    )
-  }, [cart])
 
   return (
     <CartContext.Provider
@@ -39,7 +33,6 @@ export function CartProvider({ children }) {
         cart,
         addToCart,
         removeFromCart,
-        totalMount,
         clearCart
       }}
     >

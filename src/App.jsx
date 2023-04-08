@@ -7,7 +7,6 @@ import { CartProvider } from './context/CartProvider'
 
 export default function App() {
   const { filterProducts } = useFilters()
-  // console.log('render', filterProducts)
   const newProducts = filterProducts(initialState)
   return (
     <>

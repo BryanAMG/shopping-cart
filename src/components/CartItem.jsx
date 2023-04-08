@@ -8,7 +8,7 @@ export function CartItem({ thumbnail, title, quantity, price, children }) {
           className='aspect-video w-full rounded-sm'
         />
         <strong>
-          {title} - <span className='text-gray-500'>${price}</span>
+          {title} - <span className='text-gray-300'>${price}</span>
         </strong>
       </div>
       <div className='flex justify-center gap-2'>
