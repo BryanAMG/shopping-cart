@@ -7,7 +7,6 @@ function useCartReducer() {
   const [cart, dispatch] = useReducer(cartReducer, initialCart)
 
   useEffect(() => {
-    console.log('usa')
     window.localStorage.setItem('productsCard', JSON.stringify(cart))
   }, [cart])
 
